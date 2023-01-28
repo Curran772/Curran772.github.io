@@ -1,4 +1,15 @@
-import './style.css'
+/*
+ * To run this, you have to be IN the portfolio folder
+ * Then you have to use one of the following commands:
+ * npx vite dev : starts dev server for website
+ * npx vite build : builds a production version of the website
+ * or npx vite preview : views the production version of the website
+ */
+import './style.css';
+import spaceUrl from './space2.jpg'
+import curranUrl from './Curran.jpg'
+import moonUrl from './moon.png'
+import moonNormUrl from './moonNormal.png'
 import * as THREE from 'three';
 
 // Setup
@@ -49,12 +60,12 @@ Array(200).fill().forEach(addStar)
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('space2.jpg');
+const spaceTexture = new THREE.TextureLoader().load(spaceUrl);
 scene.background = spaceTexture;
 
 // Curran
 
-const curranTexture = new THREE.TextureLoader().load('Curran.jpg');
+const curranTexture = new THREE.TextureLoader().load(curranUrl);
 const curran = new THREE.Mesh(
     new THREE.BoxGeometry(3,3,3),
     new THREE.MeshBasicMaterial({ map: curranTexture })
@@ -63,8 +74,8 @@ const curran = new THREE.Mesh(
 scene.add(curran);
 
 // DA MOON
-const moonTexture = new THREE.TextureLoader().load('moon.png');
-const moonNormalTexture = new THREE.TextureLoader().load('moonNormal.png');
+const moonTexture = new THREE.TextureLoader().load(moonUrl);
+const moonNormalTexture = new THREE.TextureLoader().load(moonNormUrl);
 
 const moon = new THREE.Mesh(
     new THREE.SphereGeometry(3, 32, 32),
