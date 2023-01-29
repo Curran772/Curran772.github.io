@@ -1,3 +1,3 @@
 export default {
-    base: ''
+    base: 'https://Curran772.github.io/'
 }

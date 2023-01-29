@@ -87,7 +87,7 @@ const moon = new THREE.Mesh(
 
 scene.add(moon);
 
-moon.position.z = 23;
+moon.position.z = 30;
 moon.position.setX(-13);
 
 curran.position.z = -5;
